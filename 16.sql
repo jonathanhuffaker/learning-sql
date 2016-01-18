@@ -1,3 +1,3 @@
 -- 16. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
 
-SELECT Track.Name, Album.Title, MediaType.Name, Genre.Name FROM Track JOIN Album ON (Album.AlbumId == Track.AlbumId) JOIN MediaType ON (MediaType.MediaTypeId == Track.MediaTypeId) JOIN Genre ON (Genre.GenreID == Track.GenreId)
+SELECT Track.Name AS "Track Name", Album.Title AS "Album Name", MediaType.Name AS "Media Type", Genre.Name AS "Genre" FROM Track JOIN Album ON (Album.AlbumId == Track.AlbumId) JOIN MediaType ON (MediaType.MediaTypeId == Track.MediaTypeId) JOIN Genre ON (Genre.GenreID == Track.GenreId)
