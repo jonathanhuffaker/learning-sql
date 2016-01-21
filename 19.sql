@@ -6,4 +6,4 @@ SELECT SUM(Invoice.Total) AS "Total Sales", Customer.SupportRepId FROM Invoice J
 
 
 
-
+SELECT SUM(Invoice.Total) AS "Total Sales", Customer.SupportRepId, Employee.FirstName, Employee.LastName FROM Invoice JOIN Customer ON (Customer.CustomerId == Invoice.CustomerId) JOIN Employee ON (Employee.EmployeeId ==  Customer.SupportRepId) WHERE Invoice.InvoiceDate Like '%2009%' GROUP BY Customer.SupportRepId
